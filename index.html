@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JesJas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./magnific/magnific-popup.css">
+
+</head>
+
+<body>
+    <!--Nav bar-->
+    <body>
+        
+        
+        
+       
+        <div id="menu" class="menu">
+          <div id="menu-bar" onclick="onClickMenu()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+     
+      <ul id="nav" class="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+      </div>
+  </div>
+        <div id="id01" class="modal">
+          
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+        
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+        
+        <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+        
+    
+    <!--End of Nav bar-->
+    <!--Header===-->
+    <header class="header">
+        <div class="hero">
+            <h1 class="title">Food For Health</h1>
+            
+     
+            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Book a Table</button>
+     
+     
+            <div id="id02" class="modal">
+
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="24f09fef68dfa31d0cd96eb222dc97f0.jpg" alt="Avatar" class="avatar">
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Members</b></label>
+          <input type="number" placeholder="Enter Members" name="Number" required>
+          <label for="psw"><b>Date</b></label>
+          <input type="Date" placeholder="Enter Date when you are coming" name="psw" required>
+            
+            
+          <button type="submit">submit</button>
+          
+        </div>
+    
+      </form>
+    </div>
+</header>
+          
+          
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+        }
+        
+        /* Set a style for all buttons */
+        button {
+          background-color:rgb(29, 229, 255);
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+        }
+        
+        button:hover {
+          opacity: 0.8;
+        }
+        
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+          width: auto;
+          padding: 10px 18px;
+          background-color: #f44336;
+        }
+        
+        /* Center the image and position the close button */
+        .imgcontainer {
+          text-align: center;
+          margin: 24px 0 12px 0;
+          position: relative;
+        }
+        
+        img.avatar {
+          width: 40%;
+          border-radius: 50%;
+        }
+        
+        .container {
+          padding: 16px;
+        }
+        
+        span.psw {
+          float: right;
+          padding-top: 16px;
+        }
+        
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+          padding-top: 60px;
+        }
+        
+        /* Modal Content/Box */
+        .modal-content {
+          background-color: #fefefe;
+          margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+          border: 1px solid #888;
+          width: 80%; /* Could be more or less, depending on screen size */
+        }
+        
+        /* The Close Button (x) */
+        .close {
+          position: absolute;
+          right: 25px;
+          top: 0;
+          color: #000;
+          font-size: 35px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: red;
+          cursor: pointer;
+        }
+        
+        /* Add Zoom Animation */
+        .animate {
+          -webkit-animation: animatezoom 0.6s;
+          animation: animatezoom 0.6s
+        }
+        
+        @-webkit-keyframes animatezoom {
+          from {-webkit-transform: scale(0)} 
+          to {-webkit-transform: scale(1)}
+        }
+          
+        @keyframes animatezoom {
+          from {transform: scale(0)} 
+          to {transform: scale(1)}
+        }
+        
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+          span.psw {
+             display: block;
+             float: none;
+          }
+          .cancelbtn {
+             width: 100%;
+          }
+        }
+        </style>
+        </head>
+       
+    <!--End of Header==================-->
+     <!---=====About Section=====-->
+      <section id="about">
+       <div>
+       <h2 class="title-text">About Us</h2>
+    </div>
+    <div class="about-center">
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-mug-hot"></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">Drinks</h2>
+                <p class="about-info">Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit. Quisquam, temporibus!</p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-utensils"></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">Healthy Food</h2>
+                <p class="about-info">Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit. Quisquam, temporibus!</p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-mortar-pestle"></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">Organic Food</h2>
+                <p class="about-info">Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit. Quisquam, temporibus!</p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-drumstick-bite"></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">White Meat</h2>
+                <p class="about-info">Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit. Quisquam, temporibus!</p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-fish"></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">Sea Food</h2>
+                <p class="about-info">Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit. Quisquam, temporibus!</p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-pepper-hot "></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">Hot & Spicy</h2>
+                <p class="about-info">Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit. Quisquam, temporibus!</p>
+            </div>
+        </article>
+        <!--End of single item-->
+    </div>   
+   </section>
+
+   <!--=====End of About Section============-->
+   <!---Menu Section---=========-->
+   <section class="menu" id="menu">
+       <article class="menu-image"></article>
+       <article class="menu-text">
+           <div class="menu-text-center">
+               <h1>Our Menu</h1>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing 
+                elit. Aut omnis nam iusto praesentium inventore vitae 
+                esse tempora repellendus.</p>
+                <a href="#">Explore</a>
+           </div>
+       </article>
+   </section>
+   <!---End of Menu Section============-->
+   
+   <!---Social Icons-->
+   <section id="social-icons">
+       <a href="#"><i class="fab fa-facebook facebook"></i></a>
+       <a href="#"><i class="fab fa-twitter twitter"></i></a>
+       <a href="#"><i class="fab fa-instagram instagram"></i></a>
+       <a href="#"><i class="fab fa-google-plus plus"></i></a>
+   </section>
+   <!--End of Social Icons-->
+   <!----------============Counter / Numbers-===================-->
+      <section id="numbers">
+       <article class="number">
+           <i class="fas fa-cloud-meatball"></i>
+           <p>50</p>
+          <h3> Drinks</h3>
+        </article>
+        <article class="number">
+            <i class="fas fa-cheese"></i>
+            <p>35</p>
+           <h3> chappathi </h3>
+         </article>
+         <article class="number">
+            <i class="fas fa-pizza-slice"></i>
+            <p>25</p>
+           <h3> Dosa </h3>
+         </article>
+         <article class="number">
+            <i class="fas fa-ice-cream"></i>
+            <p>40</p>
+           <h3> Desserts</h3>
+         </article>
+   </section>
+   <!--End of Counter===================-->
+   <!--=======-----------Card Section-----====================-->
+   <section id="food">
+       <div>
+       <h2 class="title-text"> Food Fusion</h2>
+        </div>
+      <div class="food-container">
+              <!--======Card Start ----============-->
+      <article class="food-card">
+              <img src="images/glass.jpg" class="food-img"alt="">
+              <div class="img-text">
+                  <h1>Breakfast</h1>
+              </div>
+              <div class="img-footer">
+                  <div class="footer-icon">
+                    <i class="fas fa-dollar-sign">25</i>
+                  </div>
+                  <div class="footer-btn">
+                    <button type="button"class="food-btn">Order Now</button>  
+                  </div>
+              </div>
+              </article>
+              <article class="food-card">
+                <img src="images/burger.jpg" class="food-img"alt="">
+                <div class="img-text">
+                    <h1>Lunch</h1>
+                </div>
+                <div class="img-footer">
+                    <div class="footer-icon">
+                      <i class="fas fa-dollar-sign">35</i>
+                    </div>
+                    <div class="footer-btn">
+                      <button type="button"class="food-btn">Order Now</button>  
+                    </div>
+                </div>
+                </article>
+                <article class="food-card">
+                    <img src="images/eggsplate.jpg" class="food-img"alt="">
+                    <div class="img-text">
+                        <h1>Dinner</h1>
+                    </div>
+                    <div class="img-footer">
+                        <div class="footer-icon">
+                          <i class="fas fa-dollar-sign">45</i>
+                        </div>
+                        <div class="footer-btn">
+                          <button type="button"class="food-btn">Order Now</button>  
+                        </div>
+                    </div>
+                    </article>
+       </div>
+       
+      
+       
+   </section>
+       <!--======End of Card =========-->
+
+     <!--=====End of Card Section=================-->
+       <!--Gallery Section====================-->
+    <section id="gallery">
+        <div>
+        <h2 class="title-text">Main Cuisines</h2>
+     </div>
+     <div id="gallery-center">
+         <article class="gallery-item">
+             <a href="images/tomatoes.jpg">
+                <img src="images/tomatoes.jpg" alt="">
+            </a>
+         </article>
+         <article class="gallery-item">
+            <a href="images/hero1.jpg">
+                <img src="images/hero1.jpg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/image.jpg">
+                <img src="images/image.jpg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="https://unsplash.com/photos/-YHSwy6uqvk">
+                <img src="https://unsplash.com/photos/-YHSwy6uqvk" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/interfood.jpg.jpg">
+                <img src="images/interfood.jpg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/eggsplate.jpg">
+                <img src="images/eggsplate.jpg">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/part-3.jpg">
+                <img src="images/part-3.jpg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/tomatoes.jpg">
+                <img src="images/tomatoes.jpg" alt="">
+            </a>
+        </article>
+     </div>
+     </section>
+       <!---End of Gallery Section===========-->
+       <!---footer========-->
+       <footer class="footer">
+
+        <div class="section-center">
+            <p class="text">
+                &copy; <span>Food For Health</span> 
+            </p>
+        </div>
+
+       </footer>
+       <script src="onClickMenu.js"></script>
+<!--Magnific POPup Jquery also-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="magnific/jquery.magnific-popup.min.js"></script>
+<script src="magnific/magnific.js"></script>
+</body>
+</html>
+
+       
+  
+     
+   
+
+
+
+     
+
+
+
